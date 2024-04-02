@@ -46,6 +46,8 @@ main(){
     }
           printf("%d",max);
 
+          
+
     
     // task3
 
@@ -81,27 +83,65 @@ main(){
 
     // task4
 
-    int arr[2][3];
-    for(int i=0; i<=1; i++)
+    int row, col, i, j;
+
+    printf("Enter Size of Array :");
+    scanf("%d", &row);
+    col = row;
+
+    int arr[row][col];
+
+    for (int i = 0; i < row; i++)
     {
-        for(int j=0; j<=2; j++)
+        for (int j = 0; j < row; j++)
         {
-            printf("Enter Value Elements : ");
-            scanf("%d",&arr[i][j]);
+            printf("Enter Value of Array :");
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < row; j++)
+        {
+            printf("%3d", arr[i][j]);
         }
         printf("\n");
     }
-    for(int i=0; i<=1; i++)
+
+    int r, sum = 0, c, sumc = 0;
+
+    printf("Enter Number of row :");
+    scanf("%d", &r);
+
+    for (int i = r; i < row; i++)
     {
-        int sum=0;
-        for(int j=0; j<=2; j++)
+        if (i == r + 1)
+        {
+            break;
+        }
+        for (int j = 0; j < row; j++)
         {
             sum += arr[i][j];
         }
-        printf("\nSum Of %d Rows is : %d",i,sum);
     }
-    printf("\n");
+    printf("%d\n", sum);
 
+    printf("Enter Number of col :");
+    scanf("%d", &c);
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = c; j < row; j++)
+        {
+            if (j == c + 1)
+            {
+                break;
+            }
+            sumc += arr[i][j];
+        }
+    }
+    printf("%d\n", sumc);
     
 
 
